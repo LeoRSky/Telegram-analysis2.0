@@ -9,17 +9,14 @@ class TGGui:
         self.window.geometry("450x350")
         self.window.resizable(False, False)
 
-        # Поле для пути
         tk.Label(self.window, text="Путь к папке Telegram:").pack(pady=5)
         self.path_entry = tk.Entry(self.window, width=50)
         self.path_entry.pack()
 
-        # Кнопки
         tk.Button(self.window, text="Анализировать", command=self.analyze).pack(pady=5)
         tk.Button(self.window, text="Показать результат", command=self.show_result).pack(pady=5)
         tk.Button(self.window, text="Сохранить всё", command=self.save_all).pack(pady=5)
 
-        # Поле вывода
         self.output = tk.Text(self.window, width=55, height=12, state="disabled")
         self.output.pack(pady=10)
 
