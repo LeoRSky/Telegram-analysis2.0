@@ -28,3 +28,23 @@ class TGController:
 
         self.view.OutputResult(self.files, path)
         return path
+
+    def Search(self):
+        if not self.files:
+            print('Сначала Add')
+            return
+
+        category = input(f'\nВведите категорию [pictures, videos, audio, docs]: ')
+
+        if category not in self.files:
+            print("Такой категории нет.")
+            return
+
+        path = self.view.UserPath()
+        Path(path).mkdir(parents=True, exist_ok=True)
+
+        with open(Path(path) / f"{category}.txt", "w", encoding="utf-8") as f:
+            f.write("\n".join(self.files[category]))
+
+        print(f"Файлы категории '{category}' сохранены в: {path}")
+        return path
