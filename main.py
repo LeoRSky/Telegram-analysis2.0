@@ -17,3 +17,9 @@ class ConsoleView:
 
     def search(self):
         self.controller.Search()
+
+
+console = ConsoleView()
+console.add()
+console.showAll()
+console.search()
