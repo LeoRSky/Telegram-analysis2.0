@@ -3,7 +3,8 @@ class TGView:
         return input("Введите путь для сохранения: ")
 
     def OutputResult(self, files, path):
-        print(f"\n{"Результат анализа файлов": ^37}")
+        title="Результат анализа файлов"
+        print(f"\n{title:^37}")
 
         for key, lst in files.items():
             print(f"{key.capitalize()}:{len(lst)} файлов")
