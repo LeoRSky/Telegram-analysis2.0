@@ -1,6 +1,6 @@
-from pathkib import path
+from pathlib import Path
 from Model.TGModel import TGModel
-from Views.TGView import TGView
+from View.TGView import TGView
 
 class TGController:
     def __init__(self,model, view):
